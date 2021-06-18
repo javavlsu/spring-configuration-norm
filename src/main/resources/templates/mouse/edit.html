@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/mouse/edit}" th:object="${mouse}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="name">First name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="First Name">
+    <br/>
+    <label for="description">Last name</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="description">
+    <br/>
+    <input type="submit" value="Update mouse">
+
+</form>
+</body>
+</html>
